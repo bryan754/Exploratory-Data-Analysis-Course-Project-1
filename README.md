@@ -1,21 +1,21 @@
 # Exploratory-Data-Analysis-Course-Project-1
-##This repo caters the complete R code for this assignment.
+## This repo caters the complete R code for this assignment.
 
-##For Plot 1:
+## For Plot 1:
 
-###Reading, naming and subsetting power consumption data
+### Reading, naming and subsetting power consumption data
 power <- read.table("household_power_consumption.txt",skip=1,sep=";")
 names(power) <-c("Date","Time","Global_active_power","Global_reactive_power","Voltage","Global_intensity","Sub_metering_1","Sub_metering_2","Sub_metering_3")
 subpower <- subset(power,power$Date=="1/2/2007" | power$Date =="2/2/2007")
 
-###calling the basic plot function
+### calling the basic plot function
 hist(as.numeric(as.character(subpower$Global_active_power)),col="red",main="Global Active Power",xlab="Global Active Power(kilowatts)")
 
 ### annotating graph
 title(main="Global Active Power")
 
 
-##For Plot 2:
+## For Plot 2:
 
 ### Reading, naming and subsetting power consumption data
 power <- read.table("household_power_consumption.txt",skip=1,sep=";")
@@ -36,7 +36,7 @@ plot(subpower$Time,as.numeric(as.character(subpower$Global_active_power)),type="
 title(main="Global Active Power Vs Time")
 
 
-##For Plot 3:
+## For Plot 3:
 
 ### Reading, naming and subsetting power consumption data
 power <- read.table("household_power_consumption.txt",skip=1,sep=";")
@@ -61,7 +61,7 @@ legend("topright", lty=1, col=c("black","red","blue"),legend=c("Sub_metering_1",
 title(main="Energy sub-metering")
 
 
-##For Plot 4:
+## For Plot 4:
 
 ### Reading, naming and subsetting power consumption data
 power <- read.table("household_power_consumption.txt",skip=1,sep=";")
